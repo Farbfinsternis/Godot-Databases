@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://bmje8n40m2fni"
+
+[deps]
+
+files=["res://addons/uedatabases/languages.de.translation", "res://addons/uedatabases/languages.en.translation"]
+
+source_file="res://addons/uedatabases/languages.csv"
+dest_files=["res://addons/uedatabases/languages.de.translation", "res://addons/uedatabases/languages.en.translation"]
+
+[params]
+
+compress=true
+delimiter=0

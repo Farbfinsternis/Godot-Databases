@@ -1,0 +1,66 @@
+[gd_scene load_steps=3 format=3 uid="uid://c668njbqlck60"]
+
+[ext_resource type="Script" path="res://addons/uedatabases/DBUI.gd" id="1_k26tw"]
+
+[sub_resource type="Theme" id="Theme_dxsl4"]
+
+[node name="Databases" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k26tw")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 68.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBox" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="MarginContainer/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="NewDatabase" type="Button" parent="MarginContainer/VBox/ButtonsContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Hossa"
+
+[node name="DeleteDatabase" type="Button" parent="MarginContainer/VBox/ButtonsContainer"]
+layout_mode = 2
+disabled = true
+text = "Delete"
+
+[node name="ClearDatabase" type="Button" parent="MarginContainer/VBox/ButtonsContainer"]
+layout_mode = 2
+disabled = true
+text = "Clear"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBox"]
+layout_mode = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="MarginContainer/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_constants/minimum_grab_thickness = 2
+split_offset = 5
+
+[node name="DatabasesContainer" type="VBoxContainer" parent="MarginContainer/VBox/HSplitContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="DatabaseContentContainer" type="VBoxContainer" parent="MarginContainer/VBox/HSplitContainer"]
+layout_mode = 2
+theme = SubResource("Theme_dxsl4")
+theme_override_constants/separation = 10
